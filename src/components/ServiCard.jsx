@@ -12,11 +12,11 @@ function ServiCard({ img, title, animation }) {
     <>
       <div
         data-aos={animation}
-        className="md:w-[26%] w-[85%] md:h-[20rem] h-[15rem] bg hover:shadow-lg  hover:shadow-white border-2 border-red-500 rounded-md flex justify-center items-center flec-col shadow-lg "
+        className="md:w-[26%] w-[85%] md:h-[20rem] h-[15rem] bg hover:shadow-lg linear_gradiant transition-all hover:shadow-white border-2 border-red-500 rounded-md flex justify-center items-center flec-col shadow-lg "
       >
-        <div className="flex justify-center items-center flex-col gap-2 ">
-          <div className="text-2xl">
-            <img src={img} alt="" />{" "}
+        <div className="flex justify-center items-center flex-col  w-auto h-[80%]">
+          <div className="w-ful h-full">
+            <img className="w-full h-full" src={img} alt="" />
           </div>
           <h1 className=" text-2xl ">{title}</h1>
         </div>

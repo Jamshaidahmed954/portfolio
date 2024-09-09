@@ -16,7 +16,11 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-full h-20 top-0 left-0  flex justify-around items-center bg-gray-900 text-white px-4 sticky shadow-md shadow-gray-500 navbar z-50">
+      <nav
+        className={` ${
+          isActive ? " bg-gray-900 " : "text-black"
+        } w-full h-20 top-0 left-0  flex justify-around items-center px-4 sticky shadow-md shadow-gray-500 navbar z-50`}
+      >
         <div className="flex justify-center items-center gap-4">
           <div className=" image md:w-16 w-10 h-10 md:h-16 rounded-full bg-red-500">
             <img src="../images/jamshaid3.png" alt="" />
@@ -83,8 +87,8 @@ function Navbar() {
       </nav>
       <div
         className={` ${
-          isactive ? "top-[-50%]" : "top-20"
-        }  w-full h-[20rem] text-white z-40 fixed responsivenav md:hidden`}
+          isactive ? "top-[-50%] " : "top-20 rounded-3xl"
+        } transition-all w-full h-[20rem] text-white z-40 fixed responsivenav md:hidden`}
       >
         <ul className="flex justify-center items-center flex-col  gap-6  h-full  items-centerw-full">
           <a href="">

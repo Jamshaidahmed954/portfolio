@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 // import "./App.css";
 
-import Service from "./Service";
+import Service from "./components/Service";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -10,6 +10,8 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import { ThemContext } from "./Contexts/ThemContext";
 import { useContext } from "react";
+import SkillChart from "./components/SkillChart";
+import Client from "./components/Client";
 
 function App() {
   const { isActive } = useContext(ThemContext);
@@ -26,7 +28,9 @@ function App() {
         <Header />
         <About />
         <Skills />
+        <SkillChart />
         <Service />
+        <Client />
         <Contact />
         <Footer />
       </div>

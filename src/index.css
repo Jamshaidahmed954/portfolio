@@ -31,3 +31,11 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.228));
   backdrop-filter: blur(5px);
 }
+
+.linear_gradiant:hover {
+  background: linear-gradient(
+    rgb(6, 6, 39),
+    rgba(18, 18, 171, 0.39),
+    rgb(10, 10, 117)
+  );
+}

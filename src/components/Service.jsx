@@ -1,6 +1,6 @@
 import React from "react";
 import ServiCard from "./ServiCard";
-import ServiceCardData from "./components/ServiceCardData";
+import ServiceCardData from "./ServiceCardData";
 
 function Service() {
   return (

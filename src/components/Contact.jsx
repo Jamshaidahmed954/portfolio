@@ -3,11 +3,14 @@ import { IoIosCall } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
 import aos from "aos";
 import "aos/dist/aos.css";
+import { ThemContext } from "../Contexts/ThemContext";
+import { useContext } from "react";
 import { useEffect } from "react";
 function Contact() {
+  const { isActive } = useContext(ThemContext);
   useEffect(() => {
     aos.init({
-      duration: 1000,
+      duration: 1500,
     });
   }, []);
   return (
@@ -16,7 +19,10 @@ function Contact() {
         <h1 className="text-4xl font-bold border-b-4 p-3 border-red-500">
           Contact us
         </h1>
-        <div className="md:w-[65%] contact w-[90%] mx-auto md:h-[35rem] h-auto  flex justify-center items-center py-12 z-10 bg-gray-700 rounded-md flex-col md:flex-row gap-8">
+        <div
+          data-aos="fade-up"
+          className="md:w-[65%] contact w-[90%] mx-auto md:h-[35rem] h-auto  flex justify-center items-center py-12 z-10 bg-gray-700 rounded-md flex-col md:flex-row gap-8"
+        >
           <div className="md:w-1/3 w-full h-full   rounded-md flex justify-center items-center">
             <div className="w-[90%] h-[90%] flex justify-center md:items-start items-center flex-col gap-10 font-semibold">
               <div className="flex  justify-center items-center gap-3">
@@ -43,30 +49,38 @@ function Contact() {
             <div className="md:w-[85%] w-[95%] h-[90%] flex flex-col gap-6">
               <div className="w-full flex justify-between items-center flex-col md:flex-row gap-6 md:gap-0 ">
                 <input
-                  className="bg-gray-900 p-3 rounded-sm w-full md:w-[25%]"
+                  className={`${
+                    isActive ? "bg-gray-900" : "bg-gray-100"
+                  } p-3 rounded-sm w-full md:w-[25%] outline-none`}
                   type="text"
                   placeholder="Your name"
                 />
                 <input
-                  className="bg-gray-900 p-3 rounded-sm w-full md:w-[25%]"
+                  className={`${
+                    isActive ? "bg-gray-900" : "bg-gray-100"
+                  } p-3 rounded-sm w-full md:w-[25%] outline-none`}
                   type="text"
                   placeholder="Your Email.."
                 />
                 <input
-                  className="bg-gray-900 p-3 rounded-sm w-full md:w-[25%]"
+                  className={`${
+                    isActive ? "bg-gray-900" : "bg-gray-100"
+                  } p-3 rounded-sm w-full md:w-[25%] outline-none`}
                   type="text"
                   placeholder="Your phone.."
                 />
               </div>
               <div className="w-full h-72 mt-10">
                 <textarea
-                  className="w-full h-full p-3 rounded-sm bg-gray-900"
+                  className={`${
+                    isActive ? "bg-gray-900" : "bg-gray-100"
+                  } w-full h-full p-3 rounded-sm  outline-none`}
                   name=""
                   placeholder="Type your meassage...  "
                   id=""
                 ></textarea>
               </div>
-              <button className="bg-red-500 px-4 py-3  self-center rounded-sm md:self-end  ">
+              <button className="bg-red-700 px-4 py-3  self-center rounded-sm md:self-end  ">
                 Send message
               </button>
             </div>

@@ -10,12 +10,12 @@ function About() {
   }, []);
   return (
     <>
-      <div className="w-full md:h-[50rem]  h-[100rem] navbar flex-col flex justify-center items-center gap-14">
+      <div className="w-full h-[70rem]  flex-col flex justify-center items-center gap-14">
         <Heading />
-        <div className="md:relative flex md:h-[30rem] h-[80rem] justify-between items-center rounded-xl  md:max-w-[80rem]  md:flex-row flex-col  gap-12">
+        <div className="md:relative flex md:h-[30rem] h-auto justify-between items-center rounded-xl  md:max-w-[80rem]  md:flex-row flex-col  gap-12">
           <div
             data-aos="fade-right"
-            className="md:relative  md:max-h-[40rem] md:max-w-2/5 m-0 overflow-hidden bg-white bg-clip-border rounded-xl shrink-0"
+            className="md:relative  md:max-h-[40rem] md:max-w-2/5 m-0 overflow-hidden bg-white bg-clip-border rounded-xl shrink-0  hidden md:block"
           >
             <img
               src="../images/jamshaid3.png"
@@ -25,7 +25,7 @@ function About() {
           </div>
           <div
             data-aos="fade-left"
-            className="p-6 md:h-full h-[100%] flex md:w-3/4 flex-col mx-4 relative justify-center gap-8 items-center "
+            className="p-6  md:h-[100%] flex md:w-3/4 flex-col items-center mx-4 relative justify-center gap-8 "
           >
             <p>
               I am a dedicated frontend developer with a passion for creating
@@ -48,18 +48,9 @@ function About() {
               and technical skills to new challenges and opportunities.
             </p>
 
-            <a
-              href="#_"
-              className=" px-6 py-3 font-bold  md:self-start bottom-0  md:block absolute rounded-lg "
-            >
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-purple-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-pink-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
-              <span className="relative">Learn more..</span>
-            </a>
-
-            {/* <button className=" text-xl bg-red-500 px-4 py-3 rounded-md hover:bg-red-400 md:hidden absolute bottom-0">
+            <button className=" text-xl w-1/3 bg-transparent px-4 py-3 rounded-md hover:bg-red-700 md:hidden  bottom-0">
               Resume
-            </button> */}
+            </button>
           </div>
         </div>
       </div>

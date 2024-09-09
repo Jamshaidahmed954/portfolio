@@ -4,17 +4,22 @@ import { useEffect, useRef } from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagramSquare } from "react-icons/fa";
 import { ThemContext } from "../Contexts/ThemContext";
 import { useContext } from "react";
+import ProjectCounter from "./ProjectCounter";
 
 function Header() {
   const element = useRef(null);
   useEffect(() => {
     const typed = new Typed(element.current, {
-      strings: ["jamshaid ahmed", " Frontend Developer", " UI/UX designer"],
+      strings: [
+        "jamshaid ahmed",
+        " Frontend Developer",
+        " UI/UX designer",
+        "New tech learner",
+      ],
       startDelay: 200,
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 50,
-
       loop: true,
     });
     return () => {
@@ -24,8 +29,8 @@ function Header() {
   const { isActive } = useContext(ThemContext);
   return (
     <>
-      <header className="w-full py-6 md:h-[56.5rem]  text-baseS h-auto flex justify-center items-center flex-co">
-        <div className="md:w-1/2 w-[90%] h-auto  mx-6 md:mx-0 md:h-1/2 flex justify-center items-center flex-col md:flex-row gap-8 ">
+      <header className="w-full py-6 md:h-screen h- flex justify-center items-center flex-col gap-28">
+        <div className="md:w-1/2 w-[90%]  mx-6 md:mx-0 md:h-1/2 flex justify-center items-center flex-col md:flex-row gap-8 ">
           <div
             className={`${
               isActive ? "bg-white" : "bg-red-500"
@@ -73,16 +78,12 @@ function Header() {
               </div>
             </div>
 
-            <a
-              href="#_"
-              className="relative mr-12 md:mr-0 px-6 py-3 ml-10 md:ml-0 font-bold text-white rounded-lg group "
-            >
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-purple-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-pink-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
-              <span className="relative">Learn more..</span>
-            </a>
+            <button className=" text-xl border-2 transition border-red-900 px-4 py-3 rounded-md hover:bg-red-600  bottom-0">
+              Resume
+            </button>
           </div>
         </div>
+        <ProjectCounter />
       </header>
     </>
   );
